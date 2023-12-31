@@ -12,21 +12,21 @@ permissions:
 
 jobs:
   build:
-
+    
     runs-on: ubuntu-latest
-
+    
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v3
-      with:
-        python-version: "3.11"
     - uses: mirromutth/mysql-action@v1.1
       with:
         host port: 3306
         container port: 3306
         mysql databases: 'demo'
         mysql root password: ${{ secrets.no0431** }}
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.11"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
