@@ -21,7 +21,8 @@ jobs:
         host port: 3306
         container port: 3306
         mysql databases: 'demo'
-        mysql root password: ${{ secrets.no0431** }}
+        mysql user: 'admin'
+        mysql password: 'no0431**'
     - uses: actions/checkout@v3
     - name: Set up Python 3.11
       uses: actions/setup-python@v3
