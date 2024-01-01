@@ -16,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+    - name: Setup Chromedriver
+      uses: nanasess/setup-chromedriver@v1.0.1
     - uses: mirromutth/mysql-action@v1.1
       with:
         host port: 3306
