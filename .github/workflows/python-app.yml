@@ -23,7 +23,7 @@ jobs:
       with:
         host port: 3306
         container port: 3306
-        mysql databases: 'demo'
+        mysql database: 'demo'
         mysql user: 'admin'
         mysql password: 'no0431**'
     - uses: actions/checkout@v3
